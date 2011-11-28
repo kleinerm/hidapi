@@ -389,6 +389,9 @@ int HID_API_EXPORT hid_init(void)
 		if (libusb_init(&usbcontext))
 			return -1;
 		initialized = 1;
+
+		/* Be a bit more verbose with libusb. */
+		libusb_set_debug(usbcontext, 3);
 	}
 
 	return 0;
