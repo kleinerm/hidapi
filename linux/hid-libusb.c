@@ -650,10 +650,10 @@ static void read_callback(struct libusb_transfer *transfer)
 			}
 			cur->next = rpt;
 			
-			/* Pop one off if we've reached 30 in the queue. This
+			/* Pop one off if we've reached 256 in the queue. This
 			   way we don't grow forever if the user never reads
 			   anything from the device. */
-			if (num_queued > 30) {
+			if (num_queued > 256) {
 				return_data(dev, NULL, 0);
 			}			
 		}
