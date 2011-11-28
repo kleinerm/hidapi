@@ -65,6 +65,7 @@ and re-attach of the kernel driver. See comments inside hid_enumerate().
 Linux/libusb HIDAPI programs are encouraged to use the interface number
 instead to differentiate between interfaces on a composite HID device. */
 /*#define INVASIVE_GET_USAGE*/
+#define INVASIVE_GET_USAGE
 
 /* Linked List of input reports received from the device. */
 struct input_report {
