@@ -420,7 +420,7 @@ int HID_API_EXPORT hid_init(void)
 			setlocale(LC_CTYPE, "");
 
 		/* Be silent by default with libusb. A defined environment variable LIBUSB_DEBUG overrides this. */
-		libusb_set_debug(usbcontext, 0);
+		libusb_set_debug(usb_context, 0);
 	}
 
 	return 0;
